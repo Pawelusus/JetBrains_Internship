@@ -1,5 +1,5 @@
 from random import randint
-from sys import maxsize, exit
+from sys import maxsize, exit as sys_exit
 
 
 def Hi():
@@ -13,7 +13,7 @@ def GetRandom():
 
 
 def Shutdown():
-    exit(0)
+    sys_exit(0)
 
 
 if __name__ == "__main__":
@@ -22,9 +22,11 @@ if __name__ == "__main__":
         "GetRandom": GetRandom,
         "Shutdown": Shutdown,
     }
-    input = input()
 
     while True:
-        if input not in commands.keys():
+        command = input()
+
+        if command not in commands.keys():
             continue
-        commands[input]()
+
+        commands[command]()
