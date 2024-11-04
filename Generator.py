@@ -3,16 +3,26 @@ from sys import maxsize, exit as sys_exit
 
 
 def Hi():
+    """
+    function used for veryfing responses by parent process
+    """
     print("Hi")
     return
 
 
 def GetRandom():
+    """
+    function for genereting pseudo-random numbers
+    """
     print(randint(-maxsize - 1, maxsize))
     return
 
 
 def Shutdown():
+    """
+    function for terminating the program
+    """
+    print("Terminating Generator.py")
     sys_exit(0)
 
 
